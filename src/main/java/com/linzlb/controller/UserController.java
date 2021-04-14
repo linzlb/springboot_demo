@@ -1,16 +1,19 @@
 package com.linzlb.controller;
 
+import io.swagger.annotations.Api;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
  
 /**
  * 用户Controller
  * @author Administrator
- *
  */
+@Api(value="用户Controller", tags={"用户接口"})
 @Controller
-@RequestMapping(value = "/user")
+//@RequestMapping(value = "/user")
+@RequestMapping(value = "/user" , method= {RequestMethod.GET} )
 public class UserController {
  
     @ResponseBody

@@ -34,10 +34,10 @@ public class Swagger2 extends WebMvcConfigurationSupport {
     }
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("springboot利用swagger构建api文档")
-                .description("简单优雅的restfun风格")
+                .title("The Swagger Title～")
+                .description("The Swagger Description")
                 .termsOfServiceUrl("https://www.fangzhipeng.com/springboot/2017/05/11/sb11-swagger2.html")
-                .version("1.0")
+                .version("版本号：1.0")
                 .build();
     }
 

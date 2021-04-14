@@ -6,6 +6,8 @@ import javax.validation.Valid;
 import com.linzlb.dto.RequestDto;
 import com.linzlb.dto.StudentDto;
 import com.linzlb.entity.Student;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import com.linzlb.service.StudentService;
@@ -13,6 +15,7 @@ import com.linzlb.service.StudentService;
 /**
  * 验证SpringBoot自带的字段验证
  */
+@Api(value="学生Controller", tags={"学生接口"})
 @RestController
 @RequestMapping("/student")
 public class StudentController {
@@ -26,6 +29,7 @@ public class StudentController {
      * @param requestDto
      * @return
      */
+    @ApiOperation(value = "添加学生", notes = "添加学生")
     @ResponseBody
     @PostMapping(value="/add",consumes = "application/json") //实体前要加@Valid 假如字段验证不通过，信息绑定到后面定义的BindingResult；
     public String add(@Valid RequestDto<StudentDto> requestDto, BindingResult bindingResult){

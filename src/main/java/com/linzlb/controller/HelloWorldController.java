@@ -2,11 +2,13 @@ package com.linzlb.controller;
 
 import com.linzlb.configuration.LinzlbProperties;
 import com.linzlb.dao.RedisDao;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * @Author: linzhengli
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: 2020/12/16 17:47
  * @Function: 自定义属性：需要读取配置文件的值只需要加@Value(“${属性名}”)
  */
+@ApiIgnore
 @RestController
 public class HelloWorldController {
 

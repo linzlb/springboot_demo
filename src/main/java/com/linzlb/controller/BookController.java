@@ -3,6 +3,7 @@ package com.linzlb.controller;
 import javax.annotation.Resource;
 import com.linzlb.dto.RequestDto;
 import com.linzlb.dto.ResponseDto;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -16,6 +17,7 @@ import java.util.List;
  * @GetMapping(value="xxx") 类似  @RequestMapping(value="xxx",method=RequestMethod.GET)
  * @PostMapping(value="xxx") 类似  @RequestMapping(value="xxx",method=RequestMethod.POST)
  */
+@Api(value="书本Controller", tags={"书本接口"})
 @RestController
 @RequestMapping("/book")
 public class BookController {
@@ -28,8 +30,9 @@ public class BookController {
      * @return
      */
     //,method = RequestMethod.POST, consumes = "application/json"
-    @ApiOperation(value="获取图书列表", notes="获取图书列表")
-    @RequestMapping(value="/list")
+
+    @ApiOperation(value = "获取图书列表", notes = "获取图书列表")
+    @RequestMapping(value = "/list" , method= {RequestMethod.GET} )
     public ResponseDto list(){
         List<Book> bookList = bookDao.findAll();
         ResponseDto responseDto = new ResponseDto();
@@ -44,6 +47,7 @@ public class BookController {
      * @param requestDto
      * @return
      */
+    @ApiOperation(value = "添加图书", notes = "添加图书")
     @RequestMapping(value="/add",method=RequestMethod.POST,consumes = "application/json")
     public ResponseDto add(@RequestBody RequestDto<Book> requestDto){
         bookDao.save(requestDto.getBody());
@@ -58,6 +62,7 @@ public class BookController {
      * @param requestDto
      * @return
      */
+    @ApiOperation(value = "修改图书", notes = "修改图书")
     @RequestMapping(value="/update",method=RequestMethod.POST,consumes = "application/json")
     public ResponseDto update(@RequestBody RequestDto<Book> requestDto){
         bookDao.save(requestDto.getBody());
@@ -73,6 +78,7 @@ public class BookController {
      * @param requestDto
      * @return
      */
+    @ApiOperation(value = "删除图书", notes = "删除图书")
     @RequestMapping(value="/delete",method=RequestMethod.POST,consumes = "application/json")
     public ResponseDto delete(@RequestBody RequestDto<Book> requestDto){
         bookDao.deleteById(requestDto.getBody().getId());

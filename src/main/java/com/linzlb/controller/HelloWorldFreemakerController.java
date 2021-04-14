@@ -1,14 +1,17 @@
 package com.linzlb.controller;
 
+import io.swagger.annotations.Api;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
- 
+import springfox.documentation.annotations.ApiIgnore;
+
 /**
  * 返回到freemaker视图
  * @author user
- *
  */
+@ApiIgnore
+//@Api(value="HelloWorldFreemakerController", tags={"HelloWorldFreemakerController接口"})
 @Controller //普通全页面刷新的时候用这个
 @RequestMapping("/freemarker")
 public class HelloWorldFreemakerController {
