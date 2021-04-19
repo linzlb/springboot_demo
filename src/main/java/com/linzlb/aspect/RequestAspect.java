@@ -2,22 +2,20 @@ package com.linzlb.aspect;
 
 import javax.servlet.http.HttpServletRequest;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.jboss.logging.Logger;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
- 
+
+@Order(2)
 @Aspect
 @Component
 public class RequestAspect {
   
     private Logger logger=Logger.getLogger(RequestAspect.class);
-     
+
     @Pointcut("execution(public * com.linzlb.controller.*.*(..))") //对 com.linzlb.controller包下的任意类，任意方法，任意参数，任意返回值的方法都进行切入
     public void log(){
     }
@@ -43,4 +41,5 @@ public class RequestAspect {
     public void doAfterReturning(Object result){
         logger.info("执行返回值："+result);
     }
+
 }
