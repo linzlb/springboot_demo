@@ -51,17 +51,4 @@ public class HelloWorldController {
                 +"linzlb.z="+linzlbproperties.getZ();
     }
 
-
-    //测试一下集成redis
-    @Autowired
-    RedisDao redisDao;
-    @RequestMapping("/testRedis")
-    public String testRedis(){
-		redisDao.setKey("name","linzlb");
-		redisDao.setKey("age","28");
-		System.out.println(redisDao.getValue("name"));
-		System.out.println(redisDao.getValue("age"));
-		return redisDao.getValue("name")+"-"+redisDao.getValue("age");
-    }
-
 }

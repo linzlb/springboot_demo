@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  * @Author: linzhengli
  * @Tel: 13570921913
  * @Date: 2021/4/19 10:57
- * @Function:
+ * @Function:测试异步线程用的
  */
 @Service
 public class SendSMSImpl implements SendSMS{
