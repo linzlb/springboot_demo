@@ -3,10 +3,11 @@ package com.linzlb.controller;
 import javax.annotation.Resource;
 import com.linzlb.dto.RequestDto;
 import com.linzlb.dto.ResponseDto;
+import com.linzlb.service.SendSMS;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.jboss.logging.Logger;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 import com.linzlb.dao.BookDao;
 import com.linzlb.entity.Book;
 import java.util.List;
@@ -21,9 +22,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/book")
 public class BookController {
- 
+
+    private Logger logger=Logger.getLogger(BookController.class);
+
     @Resource
     private BookDao bookDao;
+    @Resource
+    private SendSMS sendSMS;
      
     /**
      * 查询所有图书
@@ -34,6 +39,8 @@ public class BookController {
     @ApiOperation(value = "获取图书列表", notes = "获取图书列表")
     @RequestMapping(value = "/list" , method= {RequestMethod.GET} )
     public ResponseDto list(){
+        sendSMS.send();
+
         List<Book> bookList = bookDao.findAll();
         ResponseDto responseDto = new ResponseDto();
         responseDto.setCode("000000");

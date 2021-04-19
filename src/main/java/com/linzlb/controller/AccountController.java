@@ -1,9 +1,9 @@
 package com.linzlb.controller;
 
 import javax.annotation.Resource;
-
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.jboss.logging.Logger;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +18,9 @@ import com.linzlb.service.AccountService;
 @RestController
 @RequestMapping("/account")
 public class AccountController {
- 
+
+    private Logger logger=Logger.getLogger(AccountController.class);
+
     @Resource
     private AccountService accountService;
 
@@ -29,6 +31,7 @@ public class AccountController {
             accountService.transferAccounts(1, 2, 100);
             return "ok";
         }catch(Exception e){
+            logger.error(e.getMessage());
             return "no";
         }
     }
