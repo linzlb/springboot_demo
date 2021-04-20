@@ -1,11 +1,8 @@
 package com.linzlb.controller;
 
 import com.linzlb.configuration.LinzlbProperties;
-import com.linzlb.dao.RedisDao;
-import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
@@ -33,6 +30,7 @@ public class HelloWorldController {
     //使用ConfigurationProperties配置方式注入
     @Autowired
     private LinzlbProperties linzlbproperties;
+
 
     @RequestMapping("/hello")
     public String say(){
