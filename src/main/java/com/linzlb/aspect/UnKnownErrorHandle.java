@@ -23,6 +23,7 @@ public class UnKnownErrorHandle {
     @ResponseBody
     public ResponseDto handle(Exception e){
         logger.error(e.getMessage());
+        e.printStackTrace();
         return ResponseResultUtil.generateErrorResult(ExceptionEnum.UNKNOWN_ERROR.getCode(),ExceptionEnum.UNKNOWN_ERROR.getMsg());
     }
 }
