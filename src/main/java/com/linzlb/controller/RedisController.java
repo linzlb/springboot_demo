@@ -7,8 +7,7 @@ import com.linzlb.utils.RedissionUtils;
 import com.linzlb.utils.ResponseResultUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.redisson.api.RLock;
-import org.redisson.api.RedissonClient;
+import org.redisson.api.*;
 import org.redisson.config.Config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Author: linzhengli
@@ -68,7 +68,7 @@ public class RedisController {
 
     @ApiOperation(value = "测试redisLock", notes = "测试redisLock")
     @RequestMapping(value = "/redission" , method= {RequestMethod.GET} )
-    public void redisLock() throws IOException {
+    public void redisLock() throws IOException, InterruptedException {
 
         //logger.info(host+port+password+database);
         Config config = new Config();
@@ -85,7 +85,7 @@ public class RedisController {
 
 
         // Redisson的分布式可重入锁RLock 最常见的使用方法
-        RLock lock = redission.getLock("anyLock");
+//        RLock lock = redission.getLock("anyLock");
 //        lock.lock();
 //        lock.unlock();
         //另外Redisson还通过加锁的方法提供了leaseTime的参数来指定加锁的时间。超过这个时间后锁便自动解开了。
@@ -109,6 +109,36 @@ public class RedisController {
 //        Future<Boolean> res = lock.tryLockAsync(100, 10, TimeUnit.SECONDS);
 
 //https://blog.csdn.net/liuxiao723846/article/details/88131065?utm_term=redission%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81&utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-2-88131065&spm=3001.4430
+
+//        分布式AtomicLong
+//        RAtomicLong atomicLong = redission.getAtomicLong("myAtomicLong");
+//        atomicLong.set(3);
+//        atomicLong.incrementAndGet();
+//        logger.info(atomicLong.get());
+
+//        RList<String> list = redission.getList("anyList");
+//        list.add(new String("abc"));
+//        list.get(0);
+//        logger.info(list.get(0));
+//        list.remove(new String("abc"));
+//
+//        RBlockingQueue<String> queue = redission.getBlockingQueue("anyQueue");
+//        queue.offer(new String("abc"));
+//        String obj = queue.peek();
+//        String someObj = queue.poll();
+//        String ob = queue.poll(10, TimeUnit.MINUTES);
+//        logger.info(ob);
+
+//        RMap<String, String> map = redission.getMap("anyMap");
+//        String prevObject = map.put("123", new String("123"));
+//        String currentObject = map.putIfAbsent("323", new String("323"));
+//        String obj = map.remove("123");
+//        map.fastPut("321", new String("321"));
+//        map.fastRemove("321");
+//        Future<String> putAsyncFuture = map.putAsync("321");
+//        Future<Void> fastPutAsyncFuture = map.fastPutAsync("321");
+//        map.fastPutAsync("321", new String("321"));
+//        map.fastRemoveAsync("321");
 
     }
 
