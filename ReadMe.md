@@ -11,6 +11,8 @@ For further reference, please consider the following sections:
 * [SpringBoot 常用部分](http://www.ityouknow.com/spring-boot.html)
 * [Redission使用](https://blog.csdn.net/liuxiao723846/article/details/88131065?utm_term=redission%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81&utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-2-88131065&spm=3001.4430)
 * [Redission详解](https://blog.csdn.net/asd051377305/article/details/108384490?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_utm_term-0&spm=1001.2101.3001.4242)
+* [SpringBoot Actuator监控中心+AdminUI界面管理](https://blog.csdn.net/u011976388/article/details/85395130)
+
 
 
 
