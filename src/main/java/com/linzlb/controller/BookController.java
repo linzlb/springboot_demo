@@ -3,11 +3,13 @@ package com.linzlb.controller;
 import javax.annotation.Resource;
 import com.linzlb.dto.RequestDto;
 import com.linzlb.dto.ResponseDto;
+import com.linzlb.mapper.BookMapper;
 import com.linzlb.service.SendSMS;
 import com.linzlb.utils.ResponseResultUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.jboss.logging.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.linzlb.dao.BookDao;
 import com.linzlb.entity.Book;
@@ -27,8 +29,10 @@ public class BookController {
 
     private Logger logger = Logger.getLogger(BookController.class);
 
-    @Resource
+    @Autowired
     private BookDao bookDao;
+    @Resource
+    private BookMapper bookMapper;
     @Resource
     private SendSMS sendSMS;
      
@@ -51,6 +55,15 @@ public class BookController {
 //        return responseDto;
         return ResponseResultUtil.generateSuccessResult(bookList);
     }
+
+    @ApiOperation(value = "获取图书列表", notes = "获取图书列表")
+    @RequestMapping(value = "/listByMybatis" , method= {RequestMethod.GET} )
+    public ResponseDto listByMybatis(){
+
+        List<Book> bookList = bookMapper.selectAllBooks();
+        return ResponseResultUtil.generateSuccessResult(bookList);
+    }
+
 
     /**
      * 添加图书
