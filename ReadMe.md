@@ -1,26 +1,27 @@
 # Linzlb～ SpringBoot Demo
 ###项目结构
-* pom文件为基本的依赖管理文件
-* java 类文件
-    * aspect AOP切面相关的配置
-    * config 各种配置
-    * configuration 自定义的一些配置
-    * consts 常量定义
-    * controller 控制器
-    * dao jpa的dao
-    * dto dto
-    * entity entity
-    * interceptor 自定义拦截器
-    * mapper mybatis接口
-    * service service
-    * task 定时任务
-    * utils 常用工具类
-* resouces 资源文件
-    * templates 模板资源
-    * mapper mybatis的xml
-    * application.yml or application.properties 配置文件
-    * banner.txt 启动的图案
-* SpringbootApplication程序的入口
+* pom                               文件为基本的依赖管理文件
+* java                              类文件
+    * aspect                        AOP切面相关的配置
+    * config                        各种配置
+    * configuration                 自定义的一些配置
+    * consts                        常量定义
+    * controller                    控制器
+    * dao                           jpa的dao
+    * dto                           dto
+    * entity                        entity
+    * interceptor                   自定义拦截器
+    * mapper                        mybatis接口
+    * service                       service
+    * task                          定时任务
+    * utils                         常用工具类
+* resouces                          资源文件
+    * templates                     模板资源
+    * mapper                        mybatis的xml
+    * application.properties/yml    配置文件
+    * banner.txt                    启动的图案
+* SpringbootApplication             程序的入口
+
 
 ### Reference Documentation
 For further reference, please consider the following sections:
@@ -37,7 +38,16 @@ For further reference, please consider the following sections:
 * [SpringBoot Actuator监控中心+AdminUI界面管理](https://blog.csdn.net/u011976388/article/details/85395130)
 * [SpringBoot Druid整合+监控](https://www.cnblogs.com/DFX339/p/12751584.html)
 * [整合elk，搭建实时日志平台](https://www.fangzhipeng.com/springboot/2017/05/22/sprinboot22-elk.html)
-
+* [整合mybatis-plus](http://blog.java1234.com/index.html?typeId=43)
+* [springboot参考资料](http://blog.battcn.com/categories/SpringBoot/)
+* [轻松搞定安全框架（Shiro）](http://blog.battcn.com/2018/07/03/springboot/v2-other-shiro/)
+* [通用Mapper与分页插件的集成](http://blog.battcn.com/2018/05/10/springboot/v2-orm-mybatis-plugin/)
+* [优雅解决分布式限流](http://blog.battcn.com/2018/08/08/springboot/v2-cache-redislimter/)
+* [过滤器，监听器，拦截器](https://www.cnblogs.com/qdhxhz/p/9043568.html)
+* [logback日志](https://www.cnblogs.com/qdhxhz/p/9069980.html)
+* [通过Lua脚本批量插入数据到Redis布隆过滤器](https://www.cnblogs.com/qdhxhz/p/11259078.html)
+* [整合Druid实现多数据源和可视化监控](https://www.cnblogs.com/qdhxhz/p/10192041.html)
+* [SpringBoot整合Apollo](https://www.cnblogs.com/qdhxhz/p/13449285.html)
 
 
 ###SpringBoot好处
@@ -50,8 +60,10 @@ Spring Boot 使用“习惯优于配置的理念”，采用包扫描和自动�
 * Spring Boot 使监控变简单，Spring Boot 自带监控组件，使用 Actuator 轻松监控服务各项状态。
 * Spring Boot 使配置变简单，Spring Boot 提供了丰富的 Starters，集成主流开源产品往往只需要简单的配置即可。
 
+
 ###SOA和微服务的不同
 微服务架构是 SOA 架构的传承，但一个最本质的区别就在于微服务是真正的分布式的、去中心化的。把所有的“思考”逻辑包括路由、消息解析等放在服务内部，去掉一个大一统的 ESB，服务间轻通信，是比 SOA 更彻底的拆分。微服务架构强调的重点是业务系统需要彻底的组件化和服务化，原有的单个业务系统会拆分为多个可以独立开发，设计，运行和运维的小应用，这些小应用之间通过服务完成交互和集成。
+
 
 ###启动springboot 方式
 ```
@@ -61,6 +73,7 @@ mvn package  编译项目的jar
 mvn spring-boot: run 启动
 cd 到target目录，java -jar 项目.jar
 ```
+
 
 ###启动redis
 ```
