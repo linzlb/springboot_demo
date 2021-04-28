@@ -8,8 +8,8 @@ package com.linzlb.consts;
  */
 public enum ExceptionEnum {
 
-    SUCCESS("000000","success"),
-    UNKNOWN_ERROR("999999","UnknownError,Please contact the administrator");
+    SUCCESS("000000","success"),//正常返回
+    UNKNOWN_ERROR("999999","UnknownError,Please contact the administrator");//统一异常返回
 
     public String getCode() {
         return code;

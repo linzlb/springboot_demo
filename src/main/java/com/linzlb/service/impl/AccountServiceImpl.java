@@ -2,6 +2,8 @@ package com.linzlb.service.impl;
 
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.linzlb.dao.AccountDao;
 import com.linzlb.entity.Account;
@@ -17,7 +19,8 @@ public class AccountServiceImpl implements AccountService{
  
     @Resource
     private AccountDao accountDao;
- 
+
+    @Override
     @Transactional
     public void transferAccounts(int fromUserId, int toUserId, float account) {
         Account fromUserAccount=accountDao.getOne(fromUserId);

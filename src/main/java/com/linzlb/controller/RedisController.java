@@ -74,7 +74,9 @@ public class RedisController {
         Config config = new Config();
         String url = "redis://" + host + ":" + port;
 		config.useSingleServer().setAddress(url);
-        RedissonClient redission = redissionUtils.getInstance().getRedisson(config);
+        RedissonClient redission = //redissionUtils.getInstance().getRedisson(config);
+            //不应该像上面这样，通过类实例来访问静态变量 这样会增肌编译器解析成本
+            RedissionUtils.getInstance().getRedisson(config);
 
         //testRedisLock
         for (int i = 0;i < 50;i++) {

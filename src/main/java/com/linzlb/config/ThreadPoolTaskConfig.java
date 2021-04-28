@@ -18,20 +18,20 @@ import java.util.concurrent.ThreadPoolExecutor;
 @EnableAsync
 public class ThreadPoolTaskConfig {
 
-    private static final int corePoolSize = 10;       		// 核心线程数（默认线程数）
-	private static final int maxPoolSize = 100;			    // 最大线程数
-	private static final int keepAliveTime = 10;			// 允许线程空闲时间（单位：默认为秒）
-	private static final int queueCapacity = 200;			// 缓冲队列数
-	private static final String threadNamePrefix = "Async-Service-"; // 线程池名前缀
+    private static final int COREPOOLSIZE = 10;       		// 核心线程数（默认线程数）
+	private static final int MAXPOOLSIZE = 100;			    // 最大线程数
+	private static final int KEEPALIVETIME = 10;			// 允许线程空闲时间（单位：默认为秒）
+	private static final int QUEUECAPACITY = 200;			// 缓冲队列数
+	private static final String THREADNAMEPREFIX = "Async-Service-"; // 线程池名前缀
 	
 	@Bean("taskExecutor") // bean的名称，默认为首字母小写的方法名
 	public ThreadPoolTaskExecutor getAsyncExecutor(){
 		ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-		executor.setCorePoolSize(corePoolSize);   
-		executor.setMaxPoolSize(maxPoolSize);
-		executor.setQueueCapacity(queueCapacity);
-		executor.setKeepAliveSeconds(keepAliveTime);
-		executor.setThreadNamePrefix(threadNamePrefix);
+		executor.setCorePoolSize(COREPOOLSIZE);
+		executor.setMaxPoolSize(MAXPOOLSIZE);
+		executor.setQueueCapacity(QUEUECAPACITY);
+		executor.setKeepAliveSeconds(KEEPALIVETIME);
+		executor.setThreadNamePrefix(THREADNAMEPREFIX);
 		
 		// 线程池对拒绝任务的处理策略
 		executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
