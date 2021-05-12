@@ -16,15 +16,30 @@ public class SendSMSImpl implements SendSMS{
 
     private Logger log=Logger.getLogger(SendSMSImpl.class);
 
+    //异步
     @Async("taskExecutor")
     @Override
-    public void send() {
-        log.info("--------send SMS -service start------------");
+    public void asynSend() {
+        log.info("--------asynSend SMS -service start------------");
         try {
             Thread.sleep(3000); // 模拟耗时
         } catch (InterruptedException e) {
             log.error(e.getMessage());
         }
-        log.info("--------send SMS service end------------");
+        log.info("--------asynSend SMS service end------------");
     }
+
+    //同步
+    @Override
+    public void synSend(String msg) {
+        log.info("--------synSend SMS -service start------------");
+        try {
+            Thread.sleep(3000); // 模拟耗时
+        } catch (InterruptedException e) {
+            log.error(e.getMessage());
+        }
+        log.info(msg);
+        log.info("--------synSend SMS service end------------");
+    }
+
 }

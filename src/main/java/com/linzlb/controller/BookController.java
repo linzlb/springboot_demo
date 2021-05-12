@@ -45,7 +45,7 @@ public class BookController {
     @ApiOperation(value = "获取图书列表", notes = "获取图书列表")
     @RequestMapping(value = "/list" , method= {RequestMethod.GET} )
     public ResponseDto list(){
-        sendSMS.send();
+        sendSMS.asynSend();
 
         List<Book> bookList = bookDao.findAll();
 //        ResponseDto responseDto = new ResponseDto();

@@ -8,5 +8,7 @@ package com.linzlb.service;
  */
 public interface SendSMS {
 
-    void send();
+    void asynSend();
+
+    void synSend(String msg);
 }
