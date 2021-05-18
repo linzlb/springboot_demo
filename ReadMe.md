@@ -50,7 +50,10 @@ For further reference, please consider the following sections:
 * [SpringBoot整合Apollo](https://www.cnblogs.com/qdhxhz/p/13449285.html)
 * [kafka 安装 for mac](https://blog.csdn.net/oumuv/article/details/84860181)
 * [SpringBoot集成kafka全面实战](https://blog.csdn.net/yuanlong122716/article/details/105160545/)
-
+* [kafka教程1](https://www.cnblogs.com/qingyunzong/category/1212387.html)
+* [kafka教程2](https://www.cnblogs.com/riches/category/1536304.html)
+* [docker](https://www.runoob.com/docker/docker-container-usage.html)
+* [docker](https://www.docker.org.cn/book/docker/what-is-docker-16.html)
 
 
 
