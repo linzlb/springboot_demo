@@ -23,13 +23,13 @@ public class RequestAspect {
     @Before("log()")
     public void deoBefore(JoinPoint joinPoint){
         logger.info("方法执行前...");
-        ServletRequestAttributes sra=(ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request=sra.getRequest();
-        logger.info("url:"+request.getRequestURI());
-        logger.info("ip:"+request.getRemoteHost());
-        logger.info("method:"+request.getMethod());
-        logger.info("class_method:"+joinPoint.getSignature().getDeclaringTypeName()+"."+joinPoint.getSignature().getName());
-        logger.info("args:"+joinPoint.getArgs());
+//        ServletRequestAttributes sra=(ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+//        HttpServletRequest request=sra.getRequest();
+//        logger.info("url:"+request.getRequestURI());
+//        logger.info("ip:"+request.getRemoteHost());
+//        logger.info("method:"+request.getMethod());
+//        logger.info("class_method:"+joinPoint.getSignature().getDeclaringTypeName()+"."+joinPoint.getSignature().getName());
+//        logger.info("args:"+joinPoint.getArgs());
     }
      
     @After("log()")

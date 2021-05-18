@@ -48,6 +48,10 @@ For further reference, please consider the following sections:
 * [通过Lua脚本批量插入数据到Redis布隆过滤器](https://www.cnblogs.com/qdhxhz/p/11259078.html)
 * [整合Druid实现多数据源和可视化监控](https://www.cnblogs.com/qdhxhz/p/10192041.html)
 * [SpringBoot整合Apollo](https://www.cnblogs.com/qdhxhz/p/13449285.html)
+* [kafka 安装 for mac](https://blog.csdn.net/oumuv/article/details/84860181)
+* [SpringBoot集成kafka全面实战](https://blog.csdn.net/yuanlong122716/article/details/105160545/)
+
+
 
 
 ###SpringBoot好处
@@ -79,4 +83,19 @@ cd 到target目录，java -jar 项目.jar
 ```
 cd /usr/local/redis-6.2.1/src/
 ./redis-server 
+```
+###启动zk&kakfa
+```markdown
+==> zookeeper
+To have launchd start zookeeper now and restart at login:
+  brew services start zookeeper
+Or, if you don't want/need a background service you can just run:
+  zkServer start
+==> kafka
+To have launchd start kafka now and restart at login:
+  brew services start kafka
+Or, if you don't want/need a background service you can just run:
+  zookeeper-server-start -daemon /usr/local/etc/kafka/zookeeper.properties 
+  & 
+  kafka-server-start /usr/local/etc/kafka/server.properties
 ```
