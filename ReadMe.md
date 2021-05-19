@@ -52,8 +52,12 @@ For further reference, please consider the following sections:
 * [SpringBoot集成kafka全面实战](https://blog.csdn.net/yuanlong122716/article/details/105160545/)
 * [kafka教程1](https://www.cnblogs.com/qingyunzong/category/1212387.html)
 * [kafka教程2](https://www.cnblogs.com/riches/category/1536304.html)
+* [kafka教程3](https://baijiahao.baidu.com/s?id=1651919282506404758&wfr=spider&for=pc)
 * [docker](https://www.runoob.com/docker/docker-container-usage.html)
 * [docker](https://www.docker.org.cn/book/docker/what-is-docker-16.html)
+* [springboot自动装配原理](https://www.cnblogs.com/javaguide/p/springboot-auto-config.html)
+* [springboot常用注解](https://snailclimb.gitee.io/javaguide/#/./docs/system-design/framework/spring/SpringBoot+Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%80%BB%E7%BB%93)
+* [redis+lua实现分布式限流](http://blog.battcn.com/2018/08/08/springboot/v2-cache-redislimter/)
 
 
 
@@ -94,6 +98,7 @@ To have launchd start zookeeper now and restart at login:
   brew services start zookeeper
 Or, if you don't want/need a background service you can just run:
   zkServer start
+  
 ==> kafka
 To have launchd start kafka now and restart at login:
   brew services start kafka
