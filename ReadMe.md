@@ -62,6 +62,7 @@ For further reference, please consider the following sections:
 
 
 ###SpringBoot好处
+```markdown
 Spring Boot 使用“习惯优于配置的理念”，采用包扫描和自动化配置的机制来加载依赖 Jar 中的 Spring bean，
 不需要任何 Xml 配置，就可以实现 Spring 的所有配置。
 所以只需要非常少的几个配置就可以迅速方便的搭建起来一套 Web 项目或者是构建一个微服务！
@@ -70,13 +71,17 @@ Spring Boot 使用“习惯优于配置的理念”，采用包扫描和自动�
 * Spring Boot 使部署变简单，Spring Boot 本身内嵌启动容器，仅仅需要一个命令即可启动项目，结合 Jenkins 、Docker 自动化运维非常容易实现。
 * Spring Boot 使监控变简单，Spring Boot 自带监控组件，使用 Actuator 轻松监控服务各项状态。
 * Spring Boot 使配置变简单，Spring Boot 提供了丰富的 Starters，集成主流开源产品往往只需要简单的配置即可。
-
+```
 
 ###SOA和微服务的不同
-微服务架构是 SOA 架构的传承，但一个最本质的区别就在于微服务是真正的分布式的、去中心化的。把所有的“思考”逻辑包括路由、消息解析等放在服务内部，去掉一个大一统的 ESB，服务间轻通信，是比 SOA 更彻底的拆分。微服务架构强调的重点是业务系统需要彻底的组件化和服务化，原有的单个业务系统会拆分为多个可以独立开发，设计，运行和运维的小应用，这些小应用之间通过服务完成交互和集成。
+```markdown
+微服务架构是 SOA 架构的传承，但一个最本质的区别就在于微服务是真正的分布式的、去中心化的。
+把所有的“思考”逻辑包括路由、消息解析等放在服务内部，去掉一个大一统的 ESB，服务间轻通信，是比 SOA 更彻底的拆分。
+微服务架构强调的重点是业务系统需要彻底的组件化和服务化，原有的单个业务系统会拆分为多个可以独立开发，设计，运行和运维的小应用，
+这些小应用之间通过服务完成交互和集成。
+```
 
-
-###启动springboot 方式
+###打包并启动springboot 方式
 ```
 cd到项目主目录:
 mvn clean  
@@ -85,25 +90,27 @@ mvn spring-boot: run 启动
 cd 到target目录，java -jar 项目.jar
 ```
 
-
 ###启动redis
 ```
 cd /usr/local/redis-6.2.1/src/
 ./redis-server 
 ```
+
 ###启动zk&kakfa
 ```markdown
 ==> zookeeper
 To have launchd start zookeeper now and restart at login:
-  brew services start zookeeper
+    brew services start zookeeper
 Or, if you don't want/need a background service you can just run:
-  zkServer start
+    zkServer start
   
 ==> kafka
 To have launchd start kafka now and restart at login:
-  brew services start kafka
+    brew services start kafka
+    
+=======>
 Or, if you don't want/need a background service you can just run:
-  zookeeper-server-start -daemon /usr/local/etc/kafka/zookeeper.properties 
-  & 
-  kafka-server-start /usr/local/etc/kafka/server.properties
+    zookeeper-server-start -daemon /usr/local/etc/kafka/zookeeper.properties 
+    & 
+    kafka-server-start /usr/local/etc/kafka/server.properties
 ```
