@@ -58,6 +58,24 @@ For further reference, please consider the following sections:
 * [springboot自动装配原理](https://www.cnblogs.com/javaguide/p/springboot-auto-config.html)
 * [springboot常用注解](https://snailclimb.gitee.io/javaguide/#/./docs/system-design/framework/spring/SpringBoot+Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%80%BB%E7%BB%93)
 * [redis+lua实现分布式限流](http://blog.battcn.com/2018/08/08/springboot/v2-cache-redislimter/)
+* [Maven中 jar包冲突原理与解决办法](https://blog.csdn.net/noaman_wgs/article/details/81137893)
+* [微服务核心研究之--编排](https://www.jianshu.com/p/54e2e223dbac)
+* [微服务架构的核心要点和实现原理](https://www.jianshu.com/p/97ced7ffe4f8)  
+else:
+* [MQTT](https://docs.emqx.cn/enterprise/v4.2/design/design.html)
+* [docker](https://www.runoob.com/docker/docker-container-usage.html)
+* [docker logs](https://cloud.tencent.com/developer/article/1486571)
+* [jenkins](https://www.w3cschool.cn/jenkins/jenkins-6rwt28n7.html)
+* [OSS](https://help.aliyun.com/document_detail/177682.html?spm=a2c4g.11186623.6.620.414113c0XjO9xB)
+* [yuque note](https://www.yuque.com/sunxiaping/yg511q/pfa8a7)
+* [canal](https://blog.csdn.net/yehongzhi1994/article/details/107880162)
+* [springboot整合mqtt发送与订阅](https://blog.csdn.net/qq_31275085/article/details/105788873)
+* [dubbo invoke](https://blog.csdn.net/weixin_28759537/article/details/113382975)
+* [dubbo invoke](https://blog.csdn.net/u014082714/article/details/109094420?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-2-109094420.pc_agg_rank_aggregation&utm_term=dubbo%E7%9A%84invoke%E5%91%BD%E4%BB%A4&spm=1000.2123.3001.4430)
+* [mybatis-plus](https://mp.baomidou.com/guide/crud-interface.html#alwaysupdatesomecolumnbyid)
+
+
+
 
 
 
