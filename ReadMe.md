@@ -22,6 +22,9 @@
     * banner.txt                    启动的图案
 * SpringbootApplication             程序的入口
 
+### 项目对应的URL：
+* [swagger-ui](http://127.0.0.1:8888/swagger-ui.html)
+* [druid](http://127.0.0.1:8888/druid/login.html)
 
 ### Reference Documentation
 For further reference, please consider the following sections:
