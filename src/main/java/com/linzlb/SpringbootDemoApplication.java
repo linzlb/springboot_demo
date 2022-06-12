@@ -2,13 +2,19 @@ package com.linzlb;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import java.util.Arrays;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import java.util.Arrays;
 
+//import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
+//import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+//@EnableAuthorizationServer
+//@EnableAutoConfiguration(exclude = {
+//		org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class
+//})
 @EnableScheduling
 @SpringBootApplication
 @EnableAsync

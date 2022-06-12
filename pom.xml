@@ -5,6 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
+		<!--<version>2.3.8.RELEASE</version>-->
 		<version>2.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
@@ -151,6 +152,19 @@
 			<!--<artifactId>spring-boot-admin-starter-server</artifactId>-->
 			<!--<version>2.1.1</version>-->
 		<!--</dependency>-->
+
+		<!--oauth2
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-oauth2</artifactId>
+			<version>2.0.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-security</artifactId>
+			<version>2.0.1.RELEASE</version>
+		</dependency>-->
+
 	</dependencies>
 	<build>
 		<plugins>
@@ -178,4 +192,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
